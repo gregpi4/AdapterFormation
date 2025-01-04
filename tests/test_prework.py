@@ -58,7 +58,7 @@ class FakeOpenFoodFact:
     class FakeProduct:
         def get(self, product_id: str):
             return {
-                "3017620422003": SDKProduct("Nutella", "0.539", "0.0063", "-", "0.0309", "e"),
+                "59032823": SDKProduct("Nutella", "0.539", "0.0063", "-", "0.0309", "e"),
                 "3229820019307": SDKProduct("Flocons d'avoines", "0.539", "0.0063", "-", "0.0309", "e")
             }[product_id]
     
@@ -100,16 +100,25 @@ def test_adapter_retrieve_properly_formatted_nutella_data():
 
     assert product.energy == "0.539"
     assert product.protein == "0.0063"
-    assert product.fiber == "-"
+    assert product.fiber == "0.0035"
     assert product.fat == "0.0309"
     assert product.nutriscore == "e"
+
+def test_adapter_succeed_if_no_fiber():
+    adapter = OpenfoodfactAdapter()
+
+    product = adapter.get_data("miel")
+
+    assert product.name == "Miel de Fleurs BIO liquide Doseur 500g"
+    assert product.energy == "0.32"
+    assert product.fiber == "-"
 
 def test_adapter_retrieve_according_to_product_name():
     adapter = OpenfoodfactAdapter()
 
     product1 = adapter.get_data("nutella")
 
-    assert product1.name == "Nutella"
+    assert product1.name == "nutella"
 
     product2 = adapter.get_data("flocons d'avoines")
 
