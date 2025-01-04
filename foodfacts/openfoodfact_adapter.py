@@ -19,9 +19,17 @@ class OpenfoodfactAdapter:
 
     def _get_product_id(self, product_name: str):
         return {
-            "nutella": "3017620422003",
-            "cantal": "3560070753741",
+            "nutella": "59032823",
+            "cantal": "3492847922008",
             "flocons d'avoines": "3229820019307",
+            "lentilles": "3017800078853",
+            "margherita": "8008698026090",
+            "spaghetti": "8076800195057",
+            "beurre": "3412290015980",
+            "laitue": "3560070372997",
+            "miel": "3088540255279",
+            "saucisson":"3245390021298",
+            "aligot": "3245390134721"
         }[product_name]
 
     def get_data(self, product_name: str) -> Product:
