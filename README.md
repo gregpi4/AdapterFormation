@@ -15,7 +15,7 @@ python main.py
 
 3. V3 de l’api, les tests sautent, regardez pourquoi et rétablissez-les
 
-4. V4 de l’api, implémenter une nouvelle fonctionnalité, le calcul du fullness factor. Une méthode qui permet de le calculer est déjà proposé au sein du package. Le fullness factor devrait aussi être affiché lors de l’appel en ligne de commande.
+4. V4 de l’api, implémenter une nouvelle fonctionnalité, le calcul du fullness factor. Une méthode qui permet de le calculer est déjà proposé au sein du package dependency_sdk.formula. Le fullness factor devrait aussi être affiché lors de l’appel en ligne de commande.
 
 5. V5 de l’api, l’api prend maintenant bien plus de temps qu’avant et échoue parfois. Modifiez votre code pour que vos appels réussissent 9 fois sur 10 tout en réduisant au maximum le temps passé à attendre
 
