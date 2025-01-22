@@ -1,8 +1,21 @@
+## install the package
+
+create a virtualenv
+```
+python -m venv venv
+```
+
+install the requirements
+```
+pip install -r requirement.txt
+```
+
 Exercice 1 :
 
 Vous souhaitez afficher des informations sur certains produits que les employés mangent. Pour cela, vous avez déjà réalisé une API sur le lien : 
 
 Récupérez le code et suivez les étapes suivantes. Pour chaque étape, vous devez changer la version de l’api dans l’adapter (foodfacts/openfoodfact_adapter) :
+
 
 0. exécutez le code en lançant la commande
 ```python
