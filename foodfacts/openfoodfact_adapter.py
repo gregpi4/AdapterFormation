@@ -9,6 +9,7 @@ from dependency_sdk import SDKBuilder, SDKVersion, Product
 logger = logging.getLogger(__name__)
 
 NO_BUILDER_PROVIDED = None
+SDK_VERSION = SDKVersion.v1
 
 class OpenfoodfactAdapter:
     def __init__(self, sdk_builder: SDKBuilder=NO_BUILDER_PROVIDED):
@@ -33,7 +34,7 @@ class OpenfoodfactAdapter:
         }[product_name]
 
     def get_data(self, product_name: str) -> Product:
-        api = self.sdk_builder.build(SDKVersion.v1)
+        api = self.sdk_builder.build(SDK_VERSION)
         product_id = self._get_product_id(product_name)
         product = api.product.get(product_id)
         return product
