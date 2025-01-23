@@ -34,7 +34,7 @@ python main.py
 
 6. V6 de l’api, vos tests échouent régulièrement, faites quelque chose pour rétablir le service
 
-7. Fasse au temps des tests qui a explosé, que proposez-vous ?
+7. Face au temps des tests qui a explosé, que proposez-vous ?
 
 8. Vous apprenez qu’Openfoodfact subissait une attaque DDOS, ce qui explique la mauvaise disponibilité de l’application, que pensez de vos modifications ?
 
